@@ -2,6 +2,7 @@ package fp;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
@@ -12,6 +13,7 @@ public class Calculator {
      */
 	public static Class classTypeOf(Object x) {
 		return x.getClass();
+
 	}
 
 
@@ -19,22 +21,40 @@ public class Calculator {
      * devuelve una lista con los n números de la serie de fibonacci.
      */
 	public static List<Integer> fibonacci(int n) {
-		throw  new NotImplementedException();
+		List<Integer> lista=new ArrayList<Integer>();
+		int n0=1, n1=1;
+		lista.add(n0);
+		for(int i=1; i<n; i++){
+			lista.add(n1);
+			n1=n0+n1;
+			n0=n1-n0;
+		}
+		return lista;
 	}
 
 	/*
 	 * Escribir todos los números del number al 0 de step en step.
 	 */
 	public static int[] stepThisNumber(int number, int step) {
-		throw  new NotImplementedException();
-		}
+
+	}
 
 	/*
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
 	 * divisores que tiene.
 	 */
 	public static int[] divisors(int n) {
-		throw  new NotImplementedException();
+		int divisores[]=new int[20];
+		int div=1;
+		int i=0;
+		while(div<=20){
+			if(n%div==0){
+				divisores[i]=div;
+				i++;
+			}
+			div++;
+		}
+		return divisores;
 	}
 
 	/*

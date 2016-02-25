@@ -51,15 +51,15 @@ public class CalculatorTest {
 	public void testIsPalindrome() {
 		assertNotNull(checkIsPalindrome(null));
 		assertTrue(
-				checkIsPalindrome("No Mara, sometamos o matemos a Ramón.");
+				checkIsPalindrome("No Mara, sometamos o matemos a Ramón."));
 		assertTrue(
-				checkIsPalindrome("¿Acaso hubo búhos acá?");
+				checkIsPalindrome("¿Acaso hubo búhos acá?"));
 		assertTrue(
-				checkIsPalindrome("No lata, no: la totalidad arada dilato talón a talón.");
+				checkIsPalindrome("No lata, no: la totalidad arada dilato talón a talón."));
 		assertTrue(
-				checkIsPalindrome("Allí, tieta Mercè, faci cafè, crema, te i til·la");
+				checkIsPalindrome("Allí, tieta Mercè, faci cafè, crema, te i til·la"));
 		assertTrue(
-				checkIsPalindrome("No Mara, sometamos o matemos a Ramón.");
+				checkIsPalindrome("No Mara, sometamos o matemos a Ramón."));
 		assertFalse(
 				checkIsPalindrome("Buena suerte con los Test"));
 		assertFalse(
