@@ -61,7 +61,27 @@ public class Calculator {
 	 * Toma como parámetros una cadena de caracteres y devuelve cierto si la cadena resulta ser un palíndromo
 	 */
 	public static boolean checkIsPalindrome(String cadena) {
-		throw  new NotImplementedException();
+		String formateada="";
+ 		String tildes = "áàäéèëíìïóòöúùuñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ";
+ 		String ascii = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcC";
+ 	    String reverse="";
+ 		//try{
+ 	    	if(cadena!=null){
+ 			for(int i=0; i<cadena.length(); i++)
+ 					if(Character.isLetter(cadena.charAt(i)))
+ 						formateada+=cadena.charAt(i);
+ 				formateada=formateada.toLowerCase();
+ 				for(int i=0; i<tildes.length(); i++)
+ 					formateada=formateada.replace(tildes.charAt(i), ascii.charAt(i));
+ 				for(int i=formateada.length()-1; i>=0; i--)
+ 					reverse+=formateada.charAt(i);
+ 				if(formateada.equals(reverse))
+ 					return true;
+ 				else
+ 					return false;
+ 			}
+ 		//}catch(IndexOutOfBoundsException e){}
+ 	    	return false;
 	}
 
 	/*
@@ -69,7 +89,7 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-		throw  new NotImplementedException();
+		
 	}
 
 	/*
