@@ -65,7 +65,7 @@ public class Calculator {
  		String tildes = "áàäéèëíìïóòöúùuñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ";
  		String ascii = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcC";
  	    String reverse="";
- 		//try{
+
  	    	if(cadena!=null){
  			for(int i=0; i<cadena.length(); i++)
  					if(Character.isLetter(cadena.charAt(i)))
@@ -80,7 +80,7 @@ public class Calculator {
  				else
  					return false;
  			}
- 		//}catch(IndexOutOfBoundsException e){}
+
  	    	return false;
 	}
 
@@ -89,7 +89,7 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-		
+
 	}
 
 	/*
