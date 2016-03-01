@@ -96,8 +96,16 @@ public class Calculator {
 	 * este metodo devuelve cierto si el año de la fecha es bisiesto fecha
 	 * dd-MM-yyyy
 	 */
-	public static boolean isLeapYear(String fecha) {
-		throw  new NotImplementedException();
+	public static boolean isLeapYear(String fecha) {	
+		if(fecha==""){
+			return false;
+		}	
+		int anho=Integer.parseInt(fecha.substring(6));
+		if((anho%4==0)&&(anho%100!=0)||(anho%400==0)){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	/*
