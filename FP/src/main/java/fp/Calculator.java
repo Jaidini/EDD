@@ -96,10 +96,10 @@ public class Calculator {
 	 * este metodo devuelve cierto si el año de la fecha es bisiesto fecha
 	 * dd-MM-yyyy
 	 */
-	public static boolean isLeapYear(String fecha) {	
+	public static boolean isLeapYear(String fecha) {
 		if(fecha==""){
 			return false;
-		}	
+		}
 		int anho=Integer.parseInt(fecha.substring(6));
 		if((anho%4==0)&&(anho%100!=0)||(anho%400==0)){
 			return true;
@@ -112,6 +112,47 @@ public class Calculator {
 	 * este metodo devuelve cierto si la fecha es válida
 	 */
 	public static boolean isValidDate(String date) {
-		throw  new NotImplementedException();
+		if(date==""){
+			return false;
+		}
+		int day, month, year;
+		try{
+			day=Integer.parseInt(date.substring(0, 2));
+			month=Integer.parseInt(date.substring(3, 5));
+			year=Integer.parseInt(date.substring(6));
+		}catch(NumberFormatException e){
+			return false;
+		}catch(IndexOutOfBoundsException o){
+			return false;
+		}
+		if(year>0){
+			switch(month){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					if((day<=31)&&(day>0)){
+						return true;
+					}
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					if((day<=30)&&(day>0)){
+						return true;
+					}
+					break;
+				case 2:
+					if((day<=28)&&(day>0)){
+						return true;
+					}
+					break;
+			}
+		}
+		return false;
 	}
 }
