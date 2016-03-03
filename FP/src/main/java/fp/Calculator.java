@@ -36,7 +36,18 @@ public class Calculator {
 	 * Escribir todos los números del number al 0 de step en step.
 	 */
 	public static int[] stepThisNumber(int number, int step) {
-
+		int cont=number, x=0;
+		do{
+			cont-=step;
+			x++;
+		}while(cont>0);
+		x--;
+		int list[]=new int[x];
+		for(int i=0; i<x; i++){
+			list[i]=number-step;
+			number-=step;
+		}
+		return list;
 	}
 
 	/*
@@ -79,7 +90,7 @@ public class Calculator {
  					return true;
  				else
  					return false;
- 			}
+ 			} 
 
  	    	return false;
 	}
@@ -89,7 +100,7 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-
+		return "";
 	}
 
 	/*
