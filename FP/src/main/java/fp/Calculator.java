@@ -100,7 +100,19 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-		return "";
+		String[] decenas = {"","Veinte","Treinta","Cuarenta","Cincuenta","Sesenta","Setenta","Ochenta","Noventa"};
+		String[] unidades = {"Cero", "Uno","Dos","Tres","Cuatro","Cinco","Seis","Siete", "Ocho","Nueve","Diez","Once","Doce","Trece","Catorce","Quince","Dieciseis","Diecisiete","Dieciocho","Diecinueve"};
+		String respuesta="";
+		if(n<20){
+			respuesta=unidades[n];
+		}
+		if((n%10==0) && (n!=0)){
+			respuesta=decenas[n/10];
+		}
+		if(n%10!=0){
+			respuesta=decenas[n/10]+" y "+unidades[n%10];
+		}
+		return respuesta;
 	}
 
 	/*
