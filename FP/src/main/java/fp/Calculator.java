@@ -100,20 +100,30 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	public static String speakToMe(int n) {
-		String[] decenas = {"","Veinte","Treinta","Cuarenta","Cincuenta","Sesenta","Setenta","Ochenta","Noventa"};
-		String[] unidades = {"Cero", "Uno","Dos","Tres","Cuatro","Cinco","Seis","Siete", "Ocho","Nueve","Diez","Once","Doce","Trece","Catorce","Quince","Dieciseis","Diecisiete","Dieciocho","Diecinueve"};
-		String respuesta="";
-		if(n<20){
-			respuesta=unidades[n];
-		}
-		if((n%10==0) && (n!=0)){
-			respuesta=decenas[n/10];
-		}
-		if(n%10!=0){
-			respuesta=decenas[n/10]+" y "+unidades[n%10];
-		}
-		return respuesta;
-	}
+		  String[] d = {"Cero","Diez","Veinte","Treinta","Cuarenta","Cincuenta","Sesenta","Setenta","Ochenta","Noventa"};
+		  String[] u = {"","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","Diez","Once","Doce","Trece","Catorce","Quince","Dieciseis","Diecisiete","Dieciocho","Diecinueve"};
+		  String respuesta="";
+		  if(n==0){
+			  respuesta="";
+			  respuesta=d[0];
+			  return respuesta;
+		  }
+		  else if(n<20){
+			  respuesta="";
+			  respuesta=u[n];
+			  return respuesta;
+		  }
+		  else if((n%10)==0){
+			  respuesta="";
+			  respuesta=d[n/10];
+			  return respuesta;
+		  }
+		  else{
+			  respuesta="";
+			  respuesta=d[n/10]+" y "+u[n%10];
+			  return respuesta;
+		  }
+  }
 
 	/*
 	 * este metodo devuelve cierto si el año de la fecha es bisiesto fecha
